@@ -16,34 +16,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Fetch Substack RSS
+      - name: Fetch Substack posts
         run: |
-          curl -L "https://thealif.substack.com/feed" -o feed.xml
+          curl -L "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthealif.substack.com%2Ffeed" -o substack.json
 
-      - name: Install feed parser
-        run: |
-          python -m pip install feedparser
-          
-      - name: Inspect feed    
-        run: |
-          head -c 2000 feed.xml
-
-      - name: Convert RSS to JSON
+      - name: Convert posts to website data
         run: |
           python - <<'PY'
-          import feedparser
           import json
 
-          feed = feedparser.parse("feed.xml")
+          with open("substack.json", "r", encoding="utf-8") as f:
+              data = json.load(f)
 
           posts = []
 
-          for entry in feed.entries:
+          for item in data.get("items", []):
               posts.append({
-                  "title": entry.get("title", ""),
-                  "link": entry.get("link", ""),
-                  "description": entry.get("description", ""),
-                  "date": entry.get("published", "")
+                  "title": item.get("title", ""),
+                  "link": item.get("link", ""),
+                  "description": item.get("description", ""),
+                  "date": item.get("pubDate", "")
               })
 
           with open("posts.json", "w", encoding="utf-8") as f:
