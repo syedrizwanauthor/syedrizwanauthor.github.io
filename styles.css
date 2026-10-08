@@ -104,3 +104,102 @@
   }
 
 }
+/* Payment page */
+
+.payment-page{
+  min-height:70vh;
+}
+
+.payment-card{
+  max-width:900px;
+  margin:70px auto 0;
+  padding:40px;
+  background:#f8f4eb;
+  border:1px solid var(--line);
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.payment-book{
+  display:flex;
+  justify-content:center;
+}
+
+.payment-book img{
+  width:100%;
+  max-width:230px;
+  height:auto;
+  display:block;
+  box-shadow:18px 24px 40px rgba(0,0,0,.16);
+}
+
+.payment-info h2{
+  font-size:38px;
+  line-height:1.08;
+  margin:8px 0 22px;
+}
+
+.payment-info > p{
+  max-width:520px;
+  line-height:1.7;
+}
+
+.payment-price{
+  font:600 26px var(--sans);
+  margin:28px 0 12px;
+}
+
+.payment-price span{
+  display:block;
+  font:12px var(--sans);
+  color:#6f6a61;
+  margin-top:5px;
+}
+
+.payment-note{
+  font:12px var(--sans);
+  color:#6f6a61;
+  margin-top:18px;
+}
+
+.payment-help{
+  max-width:900px;
+  margin:35px auto 0;
+  padding-top:30px;
+  border-top:1px solid var(--line);
+}
+
+.payment-help h3{
+  font-size:22px;
+  margin:0 0 10px;
+}
+
+.payment-help p{
+  max-width:700px;
+  line-height:1.7;
+}
+
+.payment-help a{
+  color:var(--ink);
+}
+
+@media(max-width:700px){
+
+  .payment-card{
+    grid-template-columns:1fr;
+    gap:40px;
+    padding:25px;
+    margin-top:45px;
+  }
+
+  .payment-book img{
+    max-width:210px;
+  }
+
+  .payment-info h2{
+    font-size:32px;
+  }
+
+}
