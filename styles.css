@@ -600,14 +600,19 @@
   }
 
 }
+.book-page-hero{
+  position:relative;
+}
+
 .book-back-link{
-  grid-column:1 / -1;
+  position:absolute;
+  top:45px;
+  left:7vw;
   font:500 11px var(--sans);
   letter-spacing:.08em;
   text-transform:uppercase;
   color:#6e685e;
-  width:max-content;
-  margin-bottom:-35px;
+  z-index:2;
 }
 
 .book-back-link:hover{
