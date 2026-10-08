@@ -14,48 +14,42 @@ async function loadSubstackJournal() {
 
   try {
     const response = await fetch(
-      'https://api.rss2json.com/v1/api.json?rss_url=https://thealif.substack.com/feed'
+      'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthealif.substack.com%2Ffeed'
     );
 
     const data = await response.json();
 
-    if (!data.items || data.items.length === 0) return;
+    if (data.status !== 'ok' || !data.items || data.items.length === 0) {
+      console.log('No Substack posts found.');
+      return;
+    }
 
-    journalGrid.innerHTML = data.items.slice(0, 3).map((post, index) => {
+    journalGrid.innerHTML = '';
 
-      const date = new Date(post.pubDate);
+    data.items.slice(0, 3).forEach((post, index) => {
+      const article = document.createElement('article');
 
-      const formattedDate = date.toLocaleDateString('en-IN', {
-        day: 'numeric',
-        month: 'short',
-        year: 'numeric'
-      });
+      article.className = index === 0
+        ? 'post-card feature-post reveal'
+        : 'post-card reveal';
 
-      return `
-        <article class="post-card ${index === 0 ? 'feature-post' : ''} reveal">
+      const description = post.description
+        ? post.description.replace(/<[^>]*>/g, '').trim().slice(0, 180)
+        : '';
 
-          <div class="post-body">
-
-            <p class="post-meta">
-              ${formattedDate}
-            </p>
-
-            <h3>${post.title}</h3>
-
-            <p>
-              ${post.description.replace(/<[^>]*>/g, '').slice(0, 180)}...
-            </p>
-
-            <a href="${post.link}" target="_blank" rel="noopener" class="text-link">
-              Read essay <span>↗</span>
-            </a>
-
-          </div>
-
-        </article>
+      article.innerHTML = `
+        <div class="post-body">
+          <p class="post-meta">The Alif · Substack</p>
+          <h3>${post.title}</h3>
+          <p>${description}${description.length >= 180 ? '...' : ''}</p>
+          <a href="${post.link}" target="_blank" rel="noopener" class="text-link">
+            Read essay <span>↗</span>
+          </a>
+        </div>
       `;
 
-    }).join('');
+      journalGrid.appendChild(article);
+    });
 
   } catch (error) {
     console.error('Unable to load Substack journal:', error);
