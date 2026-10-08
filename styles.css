@@ -128,8 +128,8 @@
 }
 
 .payment-book img{
-  width:100%;
-  max-width:230px;
+  width:70%;
+  max-width:190px;
   height:auto;
   display:block;
   box-shadow:18px 24px 40px rgba(0,0,0,.16);
