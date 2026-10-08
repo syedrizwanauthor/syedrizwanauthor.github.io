@@ -600,3 +600,16 @@
   }
 
 }
+.book-back-link{
+  grid-column:1 / -1;
+  font:500 11px var(--sans);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#6e685e;
+  width:max-content;
+  margin-bottom:-35px;
+}
+
+.book-back-link:hover{
+  color:var(--ink);
+}
