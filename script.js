@@ -13,7 +13,7 @@ fetch('posts.json')
 
     posts.slice(0, 3).forEach((post, index) => {
       const article = document.createElement('article');
-      article.className = 'post-card reveal';
+      article.className = 'post-card';
 
       const description = post.description
         .replace(/<[^>]*>/g, '')
