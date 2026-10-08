@@ -1,0 +1,66 @@
+name: Update Substack Posts
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-substack:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch Substack RSS
+        run: |
+          curl -L "https://thealif.substack.com/feed" -o feed.xml
+
+      - name: Convert RSS to JSON
+        run: |
+          python - <<'PY'
+          import xml.etree.ElementTree as ET
+          import json
+          import html
+
+          tree = ET.parse("feed.xml")
+          root = tree.getroot()
+
+          posts = []
+
+          for item in root.findall(".//item"):
+              title = item.findtext("title", default="").strip()
+              link = item.findtext("link", default="").strip()
+              description = item.findtext("description", default="").strip()
+              pub_date = item.findtext("pubDate", default="").strip()
+
+              posts.append({
+                  "title": html.unescape(title),
+                  "link": link,
+                  "description": html.unescape(description),
+                  "date": pub_date
+              })
+
+          with open("posts.json", "w", encoding="utf-8") as f:
+              json.dump(posts, f, ensure_ascii=False, indent=2)
+
+          print(f"Found {len(posts)} Substack posts.")
+          PY
+
+      - name: Save updated posts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add posts.json
+
+          if git diff --cached --quiet; then
+            echo "No changes to save."
+          else
+            git commit -m "Update Substack posts"
+            git push
+          fi
