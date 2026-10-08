@@ -21,7 +21,7 @@ fetch('posts.json')
         .trim();
 
       article.innerHTML = `
-        ${index === 0 ? '<div class="post-art paper-art"><span>01</span></div>' : ''}
+      
         <div class="post-body">
           <p class="post-meta">The Alif · Journal</p>
           <h3>${post.title}</h3>
