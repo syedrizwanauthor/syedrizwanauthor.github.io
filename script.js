@@ -7,3 +7,59 @@ document.querySelector('.floating-cart').addEventListener('click',openCart);docu
 function renderCart(){countEl.textContent=items.length;const total=items.reduce((a,i)=>a+i.price,0);subtotalEl.textContent=`₹${total}`;if(!items.length){itemsEl.innerHTML='<p class="empty-cart">Your order is empty.</p>';return}itemsEl.innerHTML=items.map((i,n)=>`<div class="cart-line"><div><strong>${i.title}</strong><br><small>Signed paperback</small></div><div><strong>₹${i.price}</strong><br><button data-remove="${n}" style="border:0;background:none;padding:0;cursor:pointer;text-decoration:underline">remove</button></div></div>`).join('');itemsEl.querySelectorAll('[data-remove]').forEach(b=>b.onclick=()=>{items.splice(+b.dataset.remove,1);renderCart()})}
 document.querySelectorAll('.add-cart').forEach(btn=>btn.addEventListener('click',()=>{const p=btn.closest('.product-card');items.push({title:p.dataset.title,price:+p.dataset.price});renderCart();openCart()}));
 document.querySelector('.checkout-btn').addEventListener('click',()=>alert('This prototype is ready for a live payment link or checkout integration. Add Razorpay, Shopify, WooCommerce, Gumroad, or another provider before launch.'));
+async function loadSubstackJournal() {
+  const journalGrid = document.querySelector('.journal-grid');
+
+  if (!journalGrid) return;
+
+  try {
+    const response = await fetch(
+      'https://api.rss2json.com/v1/api.json?rss_url=https://thealif.substack.com/feed'
+    );
+
+    const data = await response.json();
+
+    if (!data.items || data.items.length === 0) return;
+
+    journalGrid.innerHTML = data.items.slice(0, 3).map((post, index) => {
+
+      const date = new Date(post.pubDate);
+
+      const formattedDate = date.toLocaleDateString('en-IN', {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric'
+      });
+
+      return `
+        <article class="post-card ${index === 0 ? 'feature-post' : ''} reveal">
+
+          <div class="post-body">
+
+            <p class="post-meta">
+              ${formattedDate}
+            </p>
+
+            <h3>${post.title}</h3>
+
+            <p>
+              ${post.description.replace(/<[^>]*>/g, '').slice(0, 180)}...
+            </p>
+
+            <a href="${post.link}" target="_blank" rel="noopener" class="text-link">
+              Read essay <span>↗</span>
+            </a>
+
+          </div>
+
+        </article>
+      `;
+
+    }).join('');
+
+  } catch (error) {
+    console.error('Unable to load Substack journal:', error);
+  }
+}
+
+loadSubstackJournal();
