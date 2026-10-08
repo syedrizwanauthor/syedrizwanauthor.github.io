@@ -31,6 +31,9 @@
 @media(max-width:640px){.section-pad{padding:78px 24px}.site-header{padding:0 24px}.brand-sub{display:none}.hero{min-height:auto}.hero h1{font-size:4rem}.hero-art{height:390px}.hero-actions,.button-row{align-items:flex-start;flex-direction:column}.featured-book{display:block}.book-visual{padding:70px 25px}.book-object{width:240px}.book-copy{padding:75px 24px}.book-grid,.shop-grid{grid-template-columns:1fr}.quote-band{padding:80px 24px}.quote-band blockquote{font-size:27px}.feature-post{grid-template-columns:1fr}.section-heading h2,.about h2,.contact h2{font-size:3.2rem}.about{padding:78px 24px}.newsletter{padding:70px 24px}.newsletter-form{
   margin-top:25px;
   width:100%;
+}.product-art.compact{
+  max-width:300px;
+  margin:0 auto;
 }
 
 .newsletter-form .btn{
