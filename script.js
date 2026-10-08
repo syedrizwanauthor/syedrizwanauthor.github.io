@@ -32,6 +32,7 @@ async function loadSubstackJournal() {
     );
 
     const posts = [...xml.querySelectorAll('item')];
+    console.log('Substack posts found:', posts.length);
 
     if (posts.length === 0) {
       console.log('No Substack posts found.');
