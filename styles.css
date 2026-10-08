@@ -203,3 +203,32 @@
   }
 
 }
+/* Legal pages */
+
+.legal-page{
+  min-height:70vh;
+}
+
+.legal-content{
+  max-width:780px;
+  margin:60px auto 0;
+}
+
+.legal-content h2{
+  font-size:28px;
+  margin:45px 0 12px;
+}
+
+.legal-content h2:first-child{
+  margin-top:0;
+}
+
+.legal-content p{
+  max-width:700px;
+  line-height:1.8;
+  margin:0 0 20px;
+}
+
+.legal-content a{
+  color:var(--ink);
+}
