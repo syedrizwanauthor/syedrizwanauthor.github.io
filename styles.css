@@ -40,6 +40,8 @@
   display:flex;
   gap:22px;
   flex-wrap:wrap;
+}.footer-bottom > div + div{
+  margin-left:auto;
 }.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
 @media(max-width:980px){.nav{display:none;position:absolute;top:88px;left:0;right:0;background:var(--paper);padding:28px 5vw;flex-direction:column;border-bottom:1px solid var(--line)}.nav.open{
   display:flex;
