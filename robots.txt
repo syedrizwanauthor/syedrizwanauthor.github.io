@@ -1,3 +1,4 @@
 User-agent: * 
 Allow: / 
-Sitemap: https://syedrizwanauthor.github.io/sitemap.xml
+
+Sitemap: https://syedrizwan.com/sitemap.xml
