@@ -2,7 +2,7 @@
 title: The Curious Case of Qanoon and Cockroaches
 date: 2026-10-10T18:14:00+05:30
 description: A Tug-of-War Between Power and Resistance
-image: ''
+image: /images/blog/😬🦷.jpg
 ---
 
 The Qanoon said that it was taken out of context.
