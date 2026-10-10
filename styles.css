@@ -740,8 +740,11 @@
     }
 
     .home-featured-book .featured-book-cover img {
-        width: min(75%, 240px);
-    }
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    object-fit: contain;
+}
 
     .home-featured-book .featured-book-quote {
         font-size: 1.7rem;
