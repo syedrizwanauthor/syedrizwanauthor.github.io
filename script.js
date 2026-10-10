@@ -17,7 +17,7 @@ fetch('/blog-feed.json')
 
     if (posts.length === 0) {
       journal.innerHTML = `
-        <article class="post-card feature-post reveal">
+        <article class="post-card feature-post">
           <div class="post-body">
             <p class="post-meta">Journal</p>
             <h3>New writing will appear here soon.</h3>
