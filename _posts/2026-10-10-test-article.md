@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Test Article
 date: 2026-10-10T13:49:00
 description: Testing the new blog publishing system.
