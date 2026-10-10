@@ -2,7 +2,7 @@
 title: Two Dotards Against the Entire Human Race and the Rest of the World
 date: 2026-10-10T18:07:00+05:30
 description: An orgy of power, blood and wars
-image: ''
+image: /images/blog/Trump and Netanyahu Agree on New Plan to End Gaza___.jpg
 ---
 
 Ideas are powerful, but some are more powerful than others: bad ideas. As you are reading this article, the world is breathing more ash than oxygen, hearing more painful cries than cackles of laughter, and witnessing more deaths than innocent cries of life. Children, women, the young, the old, the innocent, the guilty – all are suffering because of two war criminals – utterly despicable statesmen, haggard, psycho-frantic, megalomaniacal, inhuman dotards, who have an unquenchable hunger for power and money, and who continue to poke their noses in others’ affairs, as they always have done. 
