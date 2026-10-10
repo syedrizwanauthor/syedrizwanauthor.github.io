@@ -1,0 +1,8 @@
+
+title: "Syed Rizwan"
+description: "Official website of Syed Rizwan, novelist, short story writer, and poet."
+url: "https://syedrizwan.com"
+baseurl: ""
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+timezone: Asia/Kolkata
