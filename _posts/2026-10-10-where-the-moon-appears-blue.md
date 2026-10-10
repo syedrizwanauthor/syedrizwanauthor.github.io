@@ -2,7 +2,7 @@
 title: Where the Moon Appears Blue
 date: 2026-10-10T18:03:00+05:30
 description: A Short Story
-image: ''
+image: /images/blog/Moon over Mesa! October 2016.jpg
 ---
 
 “Me and you, we got more yesterday than anybody. We need some kind of tomorrow.”
