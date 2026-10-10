@@ -619,80 +619,84 @@
   color:var(--ink);
 }
 
-
-/* Featured book hero — burnt orange palette */
-.featured-book {
+/* Homepage featured book — muted terracotta and parchment */
+.home-featured-book {
     position: relative;
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
     width: 100%;
+    min-height: 520px;
+    padding: clamp(2.5rem, 6vw, 5rem);
     box-sizing: border-box;
-    min-height: 440px;
-    padding: clamp(2rem, 5vw, 4rem);
     overflow: hidden;
-    border-radius: 18px;
-    background: linear-gradient(135deg, #a8431e, #d66a32 58%, #ed9b51);
-    color: #fffaf0;
+    border-radius: 2px;
+    background: linear-gradient(125deg, #8d2f2f 0%, #a8473e 58%, #bd7255 100%);
+    color: var(--paper);
     isolation: isolate;
 }
 
-.featured-book-glow {
+.home-featured-book .featured-book-glow {
     position: absolute;
     z-index: -1;
     width: 340px;
     height: 340px;
     top: -100px;
-    right: 12%;
+    right: 8%;
     border-radius: 50%;
-    background: rgba(255, 221, 161, 0.32);
-    filter: blur(45px);
+    background: rgba(244, 240, 230, 0.13);
+    filter: blur(50px);
 }
 
-.featured-book-copy {
+.home-featured-book .featured-book-copy {
     position: relative;
     z-index: 1;
 }
 
-.featured-label {
+.home-featured-book .featured-label {
     display: inline-block;
-    margin-bottom: 1.2rem;
-    font-size: 0.72rem;
+    margin-bottom: 1.4rem;
+    color: var(--cream);
+    font: 600 10px var(--sans);
     letter-spacing: 0.2em;
-    color: #ffe2b5;
 }
 
-.featured-book-copy h2 {
-    max-width: 480px;
-    margin: 0 0 1rem;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(2rem, 4vw, 3.4rem);
+.home-featured-book .featured-book-copy h2 {
+    max-width: 500px;
+    margin: 0 0 1.2rem;
+    color: var(--paper);
+    font-family: var(--display);
+    font-size: clamp(2.8rem, 5vw, 5rem);
     font-weight: 400;
-    line-height: 1.08;
+    line-height: 1.02;
+    letter-spacing: -0.035em;
 }
 
-.featured-book-copy p {
-    max-width: 380px;
-    margin: 0 0 1.7rem;
-    color: #fff0df;
-    font-size: 1rem;
+.home-featured-book .featured-book-copy p {
+    max-width: 390px;
+    margin: 0 0 1.8rem;
+    color: #f4e5d7;
+    font-family: var(--serif);
+    font-size: 17px;
     line-height: 1.8;
 }
 
-.featured-book-link {
+.home-featured-book .featured-book-link {
     display: inline-block;
-    padding-bottom: 0.35rem;
-    border-bottom: 1px solid #ffe0b0;
-    color: #fff0d8;
-    text-decoration: none;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--cream);
+    color: var(--paper);
+    font: 500 11px var(--sans);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
-.featured-book-link:hover {
-    color: #ffffff;
+.home-featured-book .featured-book-link:hover {
+    color: var(--cream);
 }
 
-.featured-book-cover {
+.home-featured-book .featured-book-cover {
     position: relative;
     z-index: 1;
     display: flex;
@@ -700,42 +704,47 @@
     align-items: center;
 }
 
-.featured-book-cover img {
+.home-featured-book .featured-book-cover img {
     display: block;
-    width: min(100%, 270px);
+    width: min(100%, 290px);
     height: auto;
-    border-radius: 3px;
-    box-shadow: 0 22px 45px rgba(75, 28, 10, 0.35);
-    transform: rotate(1deg);
+    border-radius: 1px;
+    box-shadow: 18px 24px 45px rgba(28, 27, 24, 0.3);
+    transform: rotate(-2deg);
 }
 
-.featured-book-quote {
+.home-featured-book .featured-book-quote {
     grid-column: 1 / -1;
-    margin-top: 0.3rem;
-    padding-top: 1.2rem;
-    border-top: 1px solid rgba(255, 250, 240, 0.35);
-    color: #fff0d8;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.35rem;
+    margin-top: 0.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(244, 240, 230, 0.3);
+    color: var(--cream);
+    font-family: var(--display);
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
     font-style: italic;
+    line-height: 1.4;
+    text-align: center;
 }
 
 @media (max-width: 650px) {
-    .featured-book {
+    .home-featured-book {
         grid-template-columns: 1fr;
-        gap: 1.8rem;
-        padding: 2rem 1.4rem;
+        gap: 2rem;
+        padding: 2.2rem 1.5rem;
     }
 
-    .featured-book-cover img {
-        width: min(72%, 230px);
+    .home-featured-book .featured-book-copy h2 {
+        font-size: 3rem;
     }
 
-    .featured-book-quote {
-        font-size: 1.2rem;
+    .home-featured-book .featured-book-cover img {
+        width: min(75%, 240px);
+    }
+
+    .home-featured-book .featured-book-quote {
+        font-size: 1.7rem;
     }
 }
-
 
 /* Literary passage above the featured book */
 .hero-description {
