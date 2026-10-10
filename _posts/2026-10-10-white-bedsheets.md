@@ -2,7 +2,7 @@
 title: White Bedsheets
 date: 2026-10-10T18:16:00+05:30
 description: What is behind white bedsheets?
-image: ''
+image: /images/blog/jantar mantar protest 2026.jpg
 ---
 
 A human chain emerges on the site where people are protesting. A few police officials unofficially thrust through a lane full of people. Suddenly, voices echo in the dampened air. A few policemen, who don’t even look like policemen, come onto the stage. The protesters demand the reason. The answer is given to them by pushing them off the stage. The stage doesn’t welcome the policemen, but they stamp on its face, suppress its voice, and push the boot further down till the stage chokes and dies.
