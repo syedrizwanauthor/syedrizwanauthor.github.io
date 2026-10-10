@@ -34,3 +34,4 @@ collections:
       - label: "Article"
         name: "body"
         widget: "markdown"
+        
