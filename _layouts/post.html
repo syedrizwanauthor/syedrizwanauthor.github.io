@@ -1,0 +1,65 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} | Syed Rizwan</title>
+  <meta name="description" content="{{ page.description | default: page.title | escape }}">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .article-page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 22px 80px;
+      line-height: 1.8;
+    }
+    .article-page a { color: inherit; }
+    .article-page .back-link { display: inline-block; margin-bottom: 32px; }
+    .article-page h1 { line-height: 1.2; margin-bottom: 12px; }
+    .article-page .article-date { opacity: .7; font-size: .95rem; }
+    .article-page .article-image {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin: 28px 0;
+    }
+    .article-page .article-body img {
+      max-width: 100%;
+      height: auto;
+    }
+    .article-page blockquote {
+      margin: 24px 0;
+      padding-left: 18px;
+      border-left: 3px solid currentColor;
+    }
+  </style>
+</head>
+<body>
+  <main class="article-page">
+    <a class="back-link" href="/blog/">← All articles</a>
+    <article>
+      <h1>{{ page.title | escape }}</h1>
+      <p class="article-date">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%B %-d, %Y" }}
+        </time>
+      </p>
+
+      {% if page.image %}
+        <img class="article-image" src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}">
+      {% endif %}
+
+      {% if page.description %}
+        <p><strong>{{ page.description | escape }}</strong></p>
+      {% endif %}
+
+      <div class="article-body">
+        {{ content }}
+      </div>
+    </article>
+    <p><a href="/">← Visit Syed Rizwan’s website</a></p>
+  </main>
+</body>
+</html>
