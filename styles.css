@@ -619,18 +619,21 @@
   color:var(--ink);
 }
 
-/* Featured book hero */
+
+/* Featured book hero — burnt orange palette */
 .featured-book {
     position: relative;
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
     gap: 2rem;
+    width: 100%;
+    box-sizing: border-box;
     min-height: 440px;
     padding: clamp(2rem, 5vw, 4rem);
     overflow: hidden;
     border-radius: 18px;
-    background: linear-gradient(135deg, #27251f, #514332 60%, #87694b);
+    background: linear-gradient(135deg, #a8431e, #d66a32 58%, #ed9b51);
     color: #fffaf0;
     isolation: isolate;
 }
@@ -643,7 +646,7 @@
     top: -100px;
     right: 12%;
     border-radius: 50%;
-    background: rgba(224, 172, 104, 0.2);
+    background: rgba(255, 221, 161, 0.32);
     filter: blur(45px);
 }
 
@@ -657,7 +660,7 @@
     margin-bottom: 1.2rem;
     font-size: 0.72rem;
     letter-spacing: 0.2em;
-    color: #e5c89e;
+    color: #ffe2b5;
 }
 
 .featured-book-copy h2 {
@@ -672,7 +675,7 @@
 .featured-book-copy p {
     max-width: 380px;
     margin: 0 0 1.7rem;
-    color: #e8dfd1;
+    color: #fff0df;
     font-size: 1rem;
     line-height: 1.8;
 }
@@ -680,13 +683,13 @@
 .featured-book-link {
     display: inline-block;
     padding-bottom: 0.35rem;
-    border-bottom: 1px solid #d9b987;
-    color: #f3d7ad;
+    border-bottom: 1px solid #ffe0b0;
+    color: #fff0d8;
     text-decoration: none;
 }
 
 .featured-book-link:hover {
-    color: #fff;
+    color: #ffffff;
 }
 
 .featured-book-cover {
@@ -702,7 +705,7 @@
     width: min(100%, 270px);
     height: auto;
     border-radius: 3px;
-    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 22px 45px rgba(75, 28, 10, 0.35);
     transform: rotate(1deg);
 }
 
@@ -710,8 +713,8 @@
     grid-column: 1 / -1;
     margin-top: 0.3rem;
     padding-top: 1.2rem;
-    border-top: 1px solid rgba(255, 250, 240, 0.2);
-    color: #e5c89e;
+    border-top: 1px solid rgba(255, 250, 240, 0.35);
+    color: #fff0d8;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 1.35rem;
     font-style: italic;
@@ -732,6 +735,7 @@
         font-size: 1.2rem;
     }
 }
+
 
 /* Literary passage above the featured book */
 .hero-description {
