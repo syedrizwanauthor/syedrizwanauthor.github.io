@@ -706,11 +706,13 @@
 
 .home-featured-book .featured-book-cover img {
     display: block;
-    width: min(100%, 290px);
+    width: 100%;
+    max-width: 290px;
     height: auto;
+    object-fit: contain;
     border-radius: 1px;
     box-shadow: 18px 24px 45px rgba(28, 27, 24, 0.3);
-    transform: rotate(-2deg);
+    transform: none;
 }
 
 .home-featured-book .featured-book-quote {
