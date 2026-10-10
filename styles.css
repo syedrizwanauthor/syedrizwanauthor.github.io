@@ -628,9 +628,10 @@
     gap: 3rem;
     width: 100%;
     min-height: 520px;
-    padding: clamp(2.5rem, 6vw, 5rem);
+    height: auto;
+ padding: clamp(2.5rem, 6vw, 5rem);
     box-sizing: border-box;
-   overflow: visible;
+   overflow: hidden;
     border-radius: 2px;
     background: linear-gradient(125deg, #8d2f2f 0%, #a8473e 58%, #bd7255 100%);
     color: var(--paper);
@@ -730,7 +731,9 @@
 
 @media (max-width: 650px) {
     .home-featured-book {
-        grid-template-columns: 1fr;
+        height: auto;
+min-height: 0;
+     grid-template-columns: 1fr;
         gap: 2rem;
         padding: 2.2rem 1.5rem;
     }
