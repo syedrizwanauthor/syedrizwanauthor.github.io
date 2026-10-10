@@ -2,7 +2,7 @@
 title: 'Office Politics: Too Bad to Be Good, Even Worse to Be Bad'
 date: 2026-10-10T18:16:00+05:30
 description: Ever felt like being in a shithole?
-image: ''
+image: /images/blog/Illustrations By Sergio Ingravalle (via_ theinspiration_com).jpg
 ---
 
 Ever been a part of an office where the priority is given to the completion of a task in half the time you are allotted? Ever been in an office where you are told that it treats you like family, but the day you start prioritizing yourself, you are no longer a family? Ever been in an office where you are told to make your own decision and own up to it, but the minute you make a small mistake, the lava erupts on your cracking head while they exchange side glances? Ever been in an office where all your achievements are the company’s achievements but all your mistakes are yours to be held accountable for? Ever been in an office where, in meetings, they say to ask questions, but when you question them, they reply with silence, long stares or, to some extent, contempt?
