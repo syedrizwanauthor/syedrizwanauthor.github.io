@@ -1,59 +1,11 @@
 name: Update Substack Posts
 
 on:
-  schedule:
-    - cron: "0 * * * *"
   workflow_dispatch:
-
-permissions:
-  contents: write
 
 jobs:
   update-substack:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Fetch Substack posts
-        run: |
-          curl -L "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthealif.substack.com%2Ffeed" -o substack.json
-
-      - name: Convert posts to website data
-        run: |
-          python - <<'PY'
-          import json
-
-          with open("substack.json", "r", encoding="utf-8") as f:
-              data = json.load(f)
-
-          posts = []
-
-          for item in data.get("items", []):
-              posts.append({
-                  "title": item.get("title", ""),
-                  "link": item.get("link", ""),
-                  "description": item.get("description", ""),
-                  "date": item.get("pubDate", "")
-              })
-
-          with open("posts.json", "w", encoding="utf-8") as f:
-              json.dump(posts, f, ensure_ascii=False, indent=2)
-
-          print(f"Found {len(posts)} Substack posts.")
-          PY
-
-      - name: Save updated posts
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add posts.json
-
-          if git diff --cached --quiet; then
-            echo "No changes to save."
-          else
-            git commit -m "Update Substack posts"
-            git push
-          fi
+      - name: Workflow disabled
+        run: echo "Automatic Substack feed updates are disabled."
