@@ -2,7 +2,7 @@
 title: The Master & the Magic
 date: 2026-10-10T18:15:00+05:30
 description: Gabriel García Márquez and the Trick of Ordinary Magic
-image: ''
+image: /images/blog/Gabriel Garcia Marquez with One Hundred Years of Solitude on his head.jpg
 ---
 
 Latin American literature has given many literary giants who have contributed greatly to world literature. In today’s time, it would be a sin to speak of literature without talking about the literature carved in Latin America. There are many legendary authors behind its popularity around the globe, but Gabriel García Márquez (Gabo) is one of the foremost names among those writers. What made Gabo so special is the ordinary magic which he had mastered and showed to the world in the form of his enchanted verses. So to speak, Gabo was heavily influenced by William Faulkner’s writing style, whose shades we often see in his highly detailed environment; the spooky nature of the nights, the simple yet powerful Gothicism lurking in the windows or hanging from the virgin branches of chestnut trees. His symbols have been both simple and complex, but what made them interesting is the poetry wrapped around their neck like a necklace. There’s not a single motif Gabo sticks to the whole time, he processes multiple motifs to explain the gravity of the situation. The magic happens when he repeats them over a page, and redeems it almost then and there, breaking the preconceived notions about motifs and symbols. Now let’s talk about more magic.
