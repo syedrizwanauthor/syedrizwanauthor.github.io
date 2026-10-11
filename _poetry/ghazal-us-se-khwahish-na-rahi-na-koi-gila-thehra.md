@@ -1,5 +1,6 @@
 ---
 title: Ghazal | Us se khwahish na rahi na koi gila thehra
+layout: poem
 devanagari: |-
   उससे ख़्वाहिश न रही ना कोई गिला ठहरा
   वही हमसाया जो हर सम्त जा-बजा ठहरा
