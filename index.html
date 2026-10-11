@@ -169,7 +169,7 @@
       <div class="section-heading split reveal">
         <div>
           <p class="eyebrow">Poetry</p>
-          <h2>Words Across Two Scripts</h2>
+          <h2>Read in your chosen scripts</h2>
         </div>
         <p>
           Poems of love, loss, resistance, longing, and the
@@ -178,7 +178,37 @@
         </p>
       </div>
 
-      <div class="journal-grid">
+      
+{% assign latest_poems = site.poetry | sort: "date" | reverse %}
+{% if latest_poems.size > 0 %}
+  <div class="journal-grid">
+    {% for poem in latest_poems limit:3 %}
+      <article class="post-card feature-post reveal">
+        <div class="post-body">
+          <p class="post-meta">
+            {% if poem.date %}
+              {{ poem.date | date: "%B %-d, %Y" }}
+            {% else %}
+              Poetry by Syed Rizwan
+            {% endif %}
+          </p>
+          <h3>{{ poem.title | escape }}</h3>
+          {% if poem.description %}
+            <p>{{ poem.description | escape }}</p>
+          {% else %}
+            <p>A poem by Syed Rizwan, available in Devanagari and Roman script.</p>
+          {% endif %}
+          <a href="{{ poem.url | relative_url }}" class="text-link">
+            Read Poem <span>↗</span>
+          </a>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+{% endif %}
+
+<div class="journal-grid">
+
         <article class="post-card feature-post reveal">
           <div class="post-body">
             <p class="post-meta">Poetry by Syed Rizwan</p>
