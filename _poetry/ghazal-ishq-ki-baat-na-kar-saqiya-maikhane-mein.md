@@ -15,6 +15,11 @@ devanagari: |-
    
   तू कहीं और हो और रात यहाँ हो जाए 
   देर इतनी न लगा लौट के आ जाने में
+
+  __
+  साक़िया = मदिरा पिलाने वाला
+  अक़दाम = पाँव
+  ज़ोम = अहंकार
 roman: |-
   Ishq ki baat na kar saqiya maikhane mein
   Itni gahri bhi nahi hai mere paimanae mein
