@@ -6,3 +6,8 @@ baseurl: ""
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
 timezone: Asia/Kolkata
+
+collections:
+  poetry:
+    output: true
+    permalink: /poetry/:name/
