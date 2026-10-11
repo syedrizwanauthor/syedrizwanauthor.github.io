@@ -36,4 +36,39 @@ collections:
       - label: "Article"
         name: "body"
         widget: "markdown"
-        
+  
+  - name: "poetry"
+    label: "Poetry"
+    folder: "_poetry"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{slug}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Language"
+        name: "language"
+        widget: "select"
+        options:
+          - label: "Urdu"
+            value: "Urdu"
+          - label: "Hindi"
+            value: "Hindi"
+      - label: "Devanagari Version"
+        name: "devanagari"
+        widget: "text"
+      - label: "Roman Version"
+        name: "roman"
+        widget: "text"
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        input_timezone: "Asia/Kolkata"
+        output_utc: false
+      - label: "Description"
+        name: "description"
+        widget: "text"
+        required: false
+    
