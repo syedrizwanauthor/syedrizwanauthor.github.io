@@ -1,0 +1,335 @@
+---
+layout: null
+permalink: /links/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Syed Rizwan | Books & Links</title>
+    <meta name="description" content="Explore the books of Syed Rizwan, discover buying options, order signed copies, and find him online.">
+    <meta name="author" content="Syed Rizwan">
+    <meta name="theme-color" content="#f4f0e6">
+    <link rel="canonical" href="https://syedrizwan.com/links/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        .links-page {
+            min-height: 100vh;
+            padding: 56px 20px 36px;
+            background: var(--paper, #f4f0e6);
+            color: var(--ink, #1c1b18);
+        }
+
+        .links-container {
+            width: 100%;
+            max-width: 620px;
+            margin: 0 auto;
+        }
+
+        .links-header {
+            text-align: center;
+            margin-bottom: 38px;
+        }
+
+        .links-eyebrow {
+            margin: 0 0 12px;
+            color: var(--terracotta, #8d2f2f);
+            font: 600 11px/1.5 "DM Sans", sans-serif;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .links-title {
+            margin: 0;
+            font: 400 clamp(42px, 9vw, 62px)/1.05 "Libre Caslon Display", serif;
+            letter-spacing: -0.035em;
+        }
+
+        .links-intro {
+            max-width: 420px;
+            margin: 15px auto 0;
+            color: #625b50;
+            font: 400 17px/1.7 "Libre Caslon Text", serif;
+        }
+
+        .links-section-title {
+            margin: 0 0 16px;
+            font: 600 11px/1.5 "DM Sans", sans-serif;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .links-books {
+            display: grid;
+            gap: 14px;
+        }
+
+        .links-book {
+            display: grid;
+            grid-template-columns: 94px minmax(0, 1fr);
+            align-items: center;
+            gap: 19px;
+            padding: 15px;
+            border: 1px solid #ddd2bf;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.32);
+            text-decoration: none;
+            color: inherit;
+            transition: border-color 180ms ease, transform 180ms ease,
+                        background 180ms ease;
+        }
+
+        .links-book:hover {
+            border-color: #8d2f2f;
+            background: rgba(255, 255, 255, 0.62);
+            transform: translateY(-2px);
+        }
+
+        .links-book:focus-visible,
+        .links-social a:focus-visible {
+            outline: 2px solid #8d2f2f;
+            outline-offset: 4px;
+        }
+
+        .links-cover {
+            display: block;
+            width: 94px;
+            aspect-ratio: 2 / 3;
+            object-fit: cover;
+            border-radius: 3px;
+            box-shadow: 0 5px 14px rgba(35, 28, 18, 0.15);
+        }
+
+        .links-book-title {
+            margin: 0 0 8px;
+            font: 400 23px/1.2 "Libre Caslon Display", serif;
+        }
+
+        .links-book-description {
+            margin: 0 0 12px;
+            color: #625b50;
+            font: 400 13px/1.6 "DM Sans", sans-serif;
+        }
+
+        .links-book-action {
+            display: inline-block;
+            color: #8d2f2f;
+            font: 600 12px/1.5 "DM Sans", sans-serif;
+        }
+
+        .links-social-section {
+            margin-top: 38px;
+            padding-top: 26px;
+            border-top: 1px solid #ddd2bf;
+        }
+
+        .links-social {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .links-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 12px;
+            border: 1px solid #cfc1ab;
+            border-radius: 5px;
+            color: #29251f;
+            font: 500 13px/1.4 "DM Sans", sans-serif;
+            text-align: center;
+            text-decoration: none;
+            transition: background 180ms ease, border-color 180ms ease;
+        }
+
+        .links-social a:hover {
+            background: #e9dfc9;
+            border-color: #8d2f2f;
+        }
+
+        .links-email {
+            margin-top: 12px;
+            text-align: center;
+            font: 400 13px/1.8 "DM Sans", sans-serif;
+        }
+
+        .links-email a {
+            color: #8d2f2f;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .links-footer {
+            margin-top: 34px;
+            color: #776d5e;
+            text-align: center;
+            font: 400 11px/1.7 "DM Sans", sans-serif;
+        }
+
+        .links-footer a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        @media (max-width: 480px) {
+            .links-page {
+                padding: 40px 16px 28px;
+            }
+
+            .links-header {
+                margin-bottom: 30px;
+            }
+
+            .links-book {
+                grid-template-columns: 78px minmax(0, 1fr);
+                gap: 14px;
+                padding: 12px;
+            }
+
+            .links-cover {
+                width: 78px;
+            }
+
+            .links-book-title {
+                font-size: 20px;
+            }
+
+            .links-book-description {
+                font-size: 12px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .links-book,
+            .links-social a {
+                transition: none;
+            }
+
+            .links-book:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="links-page">
+        <div class="links-container">
+
+            <header class="links-header">
+                <p class="links-eyebrow">Author · Novelist · Poet</p>
+                <h1 class="links-title">Syed Rizwan</h1>
+                <p class="links-intro">
+                    Stories of memory, loss, identity, and the human condition.
+                    Discover my books and find me around the web.
+                </p>
+            </header>
+
+            <section aria-labelledby="links-books-heading">
+                <h2 class="links-section-title" id="links-books-heading">
+                    Explore my books
+                </h2>
+
+                <div class="links-books">
+
+                    <a class="links-book" href="/heaven-under-the-rubble.html">
+                        <img class="links-cover"
+                             src="/heaven-under-the-rubble.jpg"
+                             alt="Cover of Heaven Under the Rubble"
+                             loading="eager">
+                        <div>
+                            <h3 class="links-book-title">Heaven Under the Rubble</h3>
+                            <p class="links-book-description">
+                                Stories of war, injustice, survival, and the human cost of conflict.
+                            </p>
+                            <span class="links-book-action">Explore the book →</span>
+                        </div>
+                    </a>
+
+                    <a class="links-book" href="/memories-of-the-setting-sun.html">
+                        <img class="links-cover"
+                             src="/memories-of-the-setting-sun.jpg"
+                             alt="Cover of Memories of the Setting Sun"
+                             loading="eager">
+                        <div>
+                            <h3 class="links-book-title">Memories of the Setting Sun</h3>
+                            <p class="links-book-description">
+                                Six stories of memory, love, loss, and the passage of time.
+                            </p>
+                            <span class="links-book-action">Explore the book →</span>
+                        </div>
+                    </a>
+
+                    <a class="links-book" href="/zeena-zeena-utar-rahi-hai-raat.html">
+                        <img class="links-cover"
+                             src="/zeena-zeena-utar-rahi-hai-raat.png"
+                             alt="Cover of Zeena Zeena Utar Rahi Hai Raat"
+                             loading="eager">
+                        <div>
+                            <h3 class="links-book-title">Zeena Zeena Utar Rahi Hai Raat</h3>
+                            <p class="links-book-description">
+                                A collection of Urdu–Hindi poetry.
+                            </p>
+                            <span class="links-book-action">Explore the book →</span>
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+
+            <section class="links-social-section" aria-labelledby="links-social-heading">
+                <h2 class="links-section-title" id="links-social-heading">
+                    Find me elsewhere
+                </h2>
+
+                <nav class="links-social" aria-label="Social media">
+                    <a href="https://www.instagram.com/rizzzwrites/"
+                       target="_blank" rel="noopener noreferrer">
+                        Instagram ↗
+                    </a>
+
+                    <a href="https://www.goodreads.com/syedrizwan"
+                       target="_blank" rel="noopener noreferrer">
+                        Goodreads ↗
+                    </a>
+
+                    <a href="https://www.facebook.com/rizzwansyed/"
+                       target="_blank" rel="noopener noreferrer">
+                        Facebook ↗
+                    </a>
+
+                    <a href="https://thealif.substack.com/subscribe"
+                       target="_blank" rel="noopener noreferrer">
+                        Subscribe to my journal ↗
+                    </a>
+                </nav>
+
+                <p class="links-email">
+                    For enquiries:
+                    <a href="mailto:hello@syedrizwan.com">
+                        hello@syedrizwan.com
+                    </a>
+                </p>
+            </section>
+
+            <footer class="links-footer">
+                <a href="/">Syed Rizwan</a>
+                ·
+                <a href="/privacy.html">Privacy</a>
+                ·
+                <a href="/terms.html">Terms</a>
+            </footer>
+
+        </div>
+    </main>
+</body>
+</html>
