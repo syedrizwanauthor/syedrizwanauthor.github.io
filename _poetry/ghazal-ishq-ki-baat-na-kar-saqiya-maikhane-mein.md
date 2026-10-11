@@ -30,9 +30,12 @@ roman: |-
 
   Tu kahin aur ho aur raat yahan ho jaye
   Der itni na laga laut ke aa jaane mein
-date: 2026-10-11T11:50:00+05:30
-description: |-
+
+
+  __
   saqiya = sharaab pilaane waala
   aqdaam = paanv
   zom = ahankaar
+date: 2026-10-11T11:50:00+05:30
+description: ''
 ---
