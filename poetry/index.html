@@ -1,0 +1,218 @@
+
+---
+permalink: /poetry/
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Poetry | Syed Rizwan</title>
+  <meta name="description" content="Read poetry by Syed Rizwan. Each poem is presented in Devanagari and Roman script.">
+  <meta name="author" content="Syed Rizwan">
+  <link rel="stylesheet" href="/styles.css">
+
+  <style>
+    body {
+      background: #f4f0e6;
+      color: #292720;
+    }
+
+    .poetry-page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 28px 80px;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.85;
+    }
+
+    .poetry-masthead {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(41, 39, 32, .2);
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .poetry-page a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .poetry-page a:hover {
+      color: #8d2f2f;
+    }
+
+    .poetry-intro {
+      max-width: 700px;
+      margin: 85px auto 65px;
+      text-align: center;
+    }
+
+    .poetry-eyebrow {
+      color: #8d2f2f;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .poetry-intro h1 {
+      margin: 16px 0 20px;
+      font-size: clamp(48px, 8vw, 76px);
+      font-weight: normal;
+      line-height: 1.08;
+      letter-spacing: -.035em;
+    }
+
+    .poetry-intro > p:last-child {
+      max-width: 540px;
+      margin: 0 auto;
+      color: #625b50;
+      font-size: 19px;
+    }
+
+    .poetry-list {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .poem-card {
+      padding: 30px 0;
+      border-top: 1px solid rgba(41, 39, 32, .2);
+    }
+
+    .poem-card:last-child {
+      border-bottom: 1px solid rgba(41, 39, 32, .2);
+    }
+
+    .poem-card-date {
+      margin: 0 0 8px;
+      color: #777066;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .poem-card h2 {
+      margin: 0 0 10px;
+      font-size: clamp(27px, 5vw, 38px);
+      font-weight: normal;
+      line-height: 1.25;
+    }
+
+    .poem-card-description {
+      margin: 0 0 16px;
+      color: #625b50;
+      font-size: 17px;
+    }
+
+    .poem-card-link {
+      color: #8d2f2f !important;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .poetry-empty {
+      padding: 30px 0;
+      color: #625b50;
+      text-align: center;
+    }
+
+    .poetry-footer {
+      max-width: 700px;
+      margin: 65px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid rgba(41, 39, 32, .2);
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .poetry-footer a {
+      color: #8d2f2f;
+    }
+
+    @media (max-width: 600px) {
+      .poetry-page {
+        padding: 22px 20px 55px;
+      }
+
+      .poetry-intro {
+        margin: 60px auto 45px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="poetry-page">
+
+    <header class="poetry-masthead">
+      <a href="/">Syed Rizwan</a>
+      <a href="/#journal">The Author's Journal ↗</a>
+    </header>
+
+    <section class="poetry-intro">
+      <p class="poetry-eyebrow">Words, rhythm & memory</p>
+      <h1>Poetry</h1>
+      <p>
+        Poems in two scripts, carrying the same words across
+        different ways of reading. Choose a poem and read it
+        in Devanagari or Roman script.
+      </p>
+    </section>
+
+    <section class="poetry-list" aria-label="All poems">
+      {% assign poems = site.poetry | sort: "date" | reverse %}
+
+      {% if poems.size > 0 %}
+        {% for poem in poems %}
+          <article class="poem-card">
+            {% if poem.date %}
+              <p class="poem-card-date">
+                {{ poem.date | date: "%B %-d, %Y" }}
+              </p>
+            {% endif %}
+
+            <h2>
+              <a href="{{ poem.url | relative_url }}">
+                {{ poem.title | escape }}
+              </a>
+            </h2>
+
+            {% if poem.description %}
+              <p class="poem-card-description">
+                {{ poem.description | escape }}
+              </p>
+            {% endif %}
+
+            <a class="poem-card-link" href="{{ poem.url | relative_url }}">
+              Read poem →
+            </a>
+          </article>
+        {% endfor %}
+      {% else %}
+        <p class="poetry-empty">
+          The first poem will appear here soon.
+        </p>
+      {% endif %}
+    </section>
+
+    <footer class="poetry-footer">
+      <p><a href="/">← Return to the homepage</a></p>
+    </footer>
+
+  </main>
+</body>
+</html>
