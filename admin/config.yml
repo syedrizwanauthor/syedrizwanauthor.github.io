@@ -47,15 +47,7 @@ collections:
     fields:
       - label: "Title"
         name: "title"
-        widget: "string"
-      - label: "Language"
-        name: "language"
-        widget: "select"
-        options:
-          - label: "Urdu"
-            value: "Urdu"
-          - label: "Hindi"
-            value: "Hindi"
+        widget: "string"      
       - label: "Devanagari Version"
         name: "devanagari"
         widget: "text"
