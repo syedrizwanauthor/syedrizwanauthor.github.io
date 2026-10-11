@@ -936,3 +936,105 @@ min-height: 0;
     padding: 24px;
   }
 }
+
+/* Poetry heading — wider, centered, and evenly aligned */
+.poetry-section .section-heading {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 55px;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.poetry-section .section-heading .eyebrow {
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.poetry-section .section-heading h2 {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+}
+
+.poetry-section .section-heading > p:last-child {
+  width: 100%;
+  max-width: 850px;
+  margin: 24px auto 0;
+  font-size: 18px;
+  line-height: 1.8;
+  text-align: center;
+  text-wrap: pretty;
+}
+
+/* Keep the heading spacious on smaller screens */
+@media (max-width: 640px) {
+  .poetry-section .section-heading {
+    margin-bottom: 35px;
+  }
+
+  .poetry-section .section-heading h2 {
+    font-size: clamp(2.5rem, 10vw, 3.2rem);
+    line-height: 1.12;
+  }
+
+  .poetry-section .section-heading > p:last-child {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
+
+/* Poetry heading — wider, centered, and evenly aligned */
+.poetry-section .section-heading {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 55px;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.poetry-section .section-heading .eyebrow {
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.poetry-section .section-heading h2 {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+}
+
+.poetry-section .section-heading > p:last-child {
+  width: 100%;
+  max-width: 850px;
+  margin: 24px auto 0;
+  font-size: 18px;
+  line-height: 1.8;
+  text-align: center;
+  text-wrap: pretty;
+}
+
+/* Keep the heading spacious on smaller screens */
+@media (max-width: 640px) {
+  .poetry-section .section-heading {
+    margin-bottom: 35px;
+  }
+
+  .poetry-section .section-heading h2 {
+    font-size: clamp(2.5rem, 10vw, 3.2rem);
+    line-height: 1.12;
+  }
+
+  .poetry-section .section-heading > p:last-child {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
