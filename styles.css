@@ -802,3 +802,94 @@ min-height: 0;
         padding: 2.2rem 1.5rem;
     }
 }
+/* Poetry section — a distinct literary identity */
+.poetry-section {
+  background: #f1eadc;
+  color: #30271f;
+  border-top: 1px solid #dfd1bb;
+  border-bottom: 1px solid #dfd1bb;
+}
+
+.poetry-section .section-heading {
+  max-width: 850px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.poetry-section .eyebrow {
+  color: #8d2f2f;
+  letter-spacing: 0.24em;
+}
+
+.poetry-section .section-heading h2 {
+  font-family: var(--display);
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  line-height: 1.05;
+  color: #30271f;
+}
+
+.poetry-section .section-heading > p:last-child {
+  max-width: 620px;
+  margin: 22px auto 0;
+  color: #6e6254;
+  line-height: 1.8;
+}
+
+.poetry-section .journal-grid {
+  gap: 22px;
+}
+
+.poetry-section .post-card {
+  background: #faf6ed;
+  border: 1px solid #e2d4bd;
+  box-shadow: 0 12px 30px rgba(69, 48, 29, 0.06);
+}
+
+.poetry-section .post-body {
+  padding: 30px;
+}
+
+.poetry-section .post-meta {
+  color: #8d2f2f;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.poetry-section .post-body h3 {
+  font-family: var(--display);
+  font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+  line-height: 1.2;
+  color: #30271f;
+}
+
+.poetry-section .post-body p {
+  color: #6e6254;
+  line-height: 1.7;
+}
+
+.poetry-section .text-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #8d2f2f;
+}
+
+.poetry-section .btn-outline {
+  border-color: #8d2f2f;
+  color: #8d2f2f;
+}
+
+.poetry-section .btn-outline:hover {
+  background: #8d2f2f;
+  color: #fffaf2;
+}
+
+@media (max-width: 700px) {
+  .poetry-section .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .poetry-section .post-body {
+    padding: 24px;
+  }
+}
